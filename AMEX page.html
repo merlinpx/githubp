@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html>
+    <head>
+ 
+        <style>
+            .header{
+                position:sticky;
+                top:0;
+                z-index:999;
+            }
+        
+          .left-side ,.right-side{
+              display:flex;
+              flex-direction:row;
+              width:1fr;
+              justify-content: space-evenly;
+             background-color:white;
+              font-family: Helvetica Neue,Helvetica,sans ;
+              color:#006fcf;
+              align-items: center;
+              height:70px;
+              cursor:all-scroll;
+              border-color:lightgrey;
+              border-style:solid;
+              margin-top:-8px;
+              font-size:15px;
+              cursor :pointer;
+              position:sticky;
+              top:0;
+              
+              
+              
+              
+              
+              
+
+              
+          }  
+        .eighth{
+              margin-left:200px;
+          }
+          .nineth{
+              background-color: #006fcf;
+              color:white;
+              height:40px;
+              border-radius:2px ;
+              border-style: none;
+              width:80px;
+              margin-right:20px;
+              
+          }
+          .icon2{
+              width:50px;
+              font-size:small;
+            }
+          .search{
+              width:30px;
+              margin-left:200px;
+              margin-top:20px;
+              
+          }
+          .search:active{
+            background-image: url('https://icon-library.com/images/01-512_7282.png'); 
+          }
+          .header2{
+              display:flex;
+              flex-direction: row;
+              border-color:lightgrey;
+              border-style:solid;
+              height:60px;
+              width:1252px;
+              margin-left:80px;
+              background-color:rgb(234, 232, 232) ;
+              margin-top:10px;
+              border-style:none;
+
+              
+          }
+          .one{
+              display:flex;
+              flex-direction: row;
+              width:120px;
+              margin-left:40px;
+              justify-content: center;
+              text-align: center;
+              margin-top:20px;
+              color: #006fcf;
+              font-family: Helvetica Neue,Helvetica,sans ;
+              background-color: rgb(233, 230, 230);
+              height:40px;
+
+              
+          }
+          .one:active{
+           
+           color:black;
+           background-color: white; 
+           border-top: solid 3px black;
+           
+          }
+          .two{
+              display:flex;
+              flex-direction:row;
+              width:120px;
+              text-align:center;
+              justify-content: center;
+              margin-top:20px ;
+              color: #006fcf;
+              font-family: Helvetica Neue,Helvetica,sans ;
+
+          }
+          .two:active{
+            border-color: #333; 
+           
+           background-color: white;
+           border-top:solid  3px black ;
+           
+          }
+          .three{
+              display: flex;
+              flex-direction: row;
+            color: #333;
+           font-family: Helvetica Neue,Helvetica,sans-serif;
+           
+           text-align: center;
+           margin-top: 20px;
+           line-height: 1.75rem;
+           width:400px;
+           font-weight:40px;
+
+           
+           font-size: 1.25rem;
+          }
+          .sidebar{
+              display:flex;
+              flex-direction:column;
+              height:1300px;
+              justify-content: space-between;
+             border-color:lightgrey ;
+             
+             width:279px;
+             margin-left:100px;
+             margin-top:35px;
+             
+             align-items: center;
+             font-family: Helvetica Neue,Helvetica,sans-serif;
+             font-weight: 500;
+             font-size: medium;
+             cursor:pointer;
+             
+          }
+          
+          .Account{
+            display: flex;
+            width:279px;
+            justify-content:center;
+            height:110px;
+            border-color:lightgrey;
+            border-style:solid;
+            align-items:center;
+
+          }
+          .Account:hover{
+              background-color: rgb(237, 233, 233);
+          }
+          
+          .Loans{
+            display: flex;
+            justify-content:center;
+            width:279px;
+            height:110px;
+            border-color:lightgrey;
+            border-style:solid;
+            align-items:center;
+          }
+          .Loans:hover{
+              background-color: rgb(237, 233, 233);
+          }
+          
+          
+
+          
+          .checkings{
+            display: flex;
+            justify-content:center;
+            width:279px;
+            height:110px;
+            border-color:lightgrey;
+            border-style:solid;
+            border-bottom-color: white;
+            align-items:center;
+            
+            
+          }
+          .checkings:hover{
+              background-color: rgb(237, 233, 233);
+          }
+          
+          .card{
+            display: flex;
+            justify-content:center;
+            width:295px;
+            height:110px;
+            border-color:lightgrey;
+            border-style:solid;
+            align-items:center ;
+            margin-left:20px;
+            
+
+          }
+          .card:hover{
+              background-color: rgb(237, 233, 233);
+          }
+          
+          .first-section{
+             display:flex;
+             flex-direction: row;
+              position:relative;
+              width:295px;
+              height:110px;
+              margin-left:-20px;
+              border-top-left-radius: 5px;
+              border-top-right-radius:5px ;
+            
+          }
+          .bank{
+              position:absolute;
+              top:37px;
+              left:20px;
+              object-fit: cover;
+    
+            width:50px;
+            border-radius:50%;
+            margin-left: 10px;
+        
+          }
+          .cards{
+            
+             display:flex;
+             flex-direction: row;
+             justify-content: center;
+        
+            width:279px;
+            height:110px;
+            border-color:lightgrey;
+            border-style:solid;
+            align-items:center;
+             margin-left: 20px;
+            
+          }
+          .cards:hover{
+              background-color: rgb(237, 233, 233);
+          }
+          
+          
+          
+          .second-section{
+              display:flex;
+              flex-direction: row;
+              width:279px;
+              position:relative;
+              
+          }
+          .savings{
+              position:absolute;
+              width:50px;
+              left:10px;
+              top:20px;
+              object-fit:cover;
+          }
+          .third-section{
+              position:relative;
+              display:flex;
+              flex-direction: row;
+
+          }
+          .personal{
+              position:absolute;
+              width:50px;
+              left:20px;
+              top:10px;
+          }
+          .fourth-section{
+              position:relative;
+              display:flex;
+              flex-direction:row;
+          }
+          .saving{
+              position:absolute;
+              width:50px;
+              top:17px;
+              left:5px;
+          }
+          
+          
+          .fifth-section{
+            position:relative;
+              display:flex;
+              flex-direction:row;
+              margin-right: 20px;
+          }
+          .credit{
+              position:absolute;
+              width:90px;
+              left:5px;
+              top:37px;
+              object-fit: cover;
+              
+              
+          }
+          .slider{
+              max-width:500px;
+              position:relative;
+              left:410px;
+              bottom:560px;
+              height:450px;
+              
+          }
+          .numbertext{
+              position:absolute;
+              bottom:20px;
+              left:300px;
+          }
+          .image1{
+              height:570px;
+              border-radius:2px;
+          }
+          .card-container{
+              width:399px;
+              position:relative;
+              left:885px;
+              bottom:1010px;
+              
+              
+              
+          }  
+            
+          .box1{
+              border-top-left-radius: 5px;
+              border-top-right-radius:5px;
+              width:399px;
+          }    
+
+          
+          .adventure{
+              position: relative;
+              border-style:none;
+              width:399px;
+              background-color:rgb(237, 233, 233);
+              margin-top:-20px;
+              height:140px;
+              border-bottom-left-radius: 5px;
+              border-bottom-right-radius:5px;
+              cursor:pointer;
+              
+
+          }
+          .adventure:hover{
+              background-color:lightgrey;
+          }
+          .head1{
+        margin-left: 20px;
+        
+          }
+
+          .text{
+              margin-left:20px;
+
+          }
+          
+          .card-container2{
+              width:399px;
+              position:relative;
+              left:885px;
+              bottom:990px;
+              object-fit: cover;
+                
+          }  
+            
+          .box2{
+              border-top-left-radius: 5px;
+              border-top-right-radius:5px;
+              width:300px;
+              
+
+          }    
+
+          
+          .adventure2{
+              position: relative;
+              border-style:none;
+              width:399px;
+              background-color:rgb(237, 233, 233);
+              margin-top:-20px;
+              height:140px;
+              border-bottom-left-radius: 5px;
+              border-bottom-right-radius:5px;
+              cursor:pointer;
+              
+
+          }
+          .adventure2:hover{
+              background-color:lightgrey;
+          }
+          .head2{
+        margin-left: 20px;
+        
+          }
+
+          .text2{
+              margin-left:20px;
+
+          }
+          .box2{
+              width:399px;
+              height:145px;
+              object-fit: cover;
+          }
+          .big-container{
+              width:1300px;
+              height:600px;
+              background-color:rgb(237, 233, 233);
+              position:relative;
+              left:-850px;
+              top:50px;
+          }
+
+          .page2-container1{
+              width:399px;
+              position:absolute;
+              top:110px;
+              right:850px;
+              border-top-left-radius:5px ;
+              border-top-right-radius:5px ;
+            object-fit: cover;
+            height:218px;
+        
+        
+                
+          }  
+          
+          .adventure3{
+              position: absolute;
+              border-style:none;
+              width:388px;
+              background-color:rgb(255, 253, 253);
+              margin-top:-20px;
+              height:184px;
+              border-bottom-left-radius:5px;
+              border-bottom-right-radius:5px;
+              cursor:pointer;
+              font-family: Helvetica Neue,Helvetica,sans-serif;
+              
+              font-weight: 320;
+              font-size: 1.25rem;
+              line-height: 1.75rem;
+              
+
+          }
+          .adventure3:hover{
+              background-color:lightgrey;
+          }
+          .head3{
+             margin-left: 20px;
+        
+          }
+
+          .text3{
+              margin-left:20px;
+              position:absolute;
+              top:10px;
+
+          }
+          .learn{
+              color:#006fcf;
+              border-color: blue;
+              border-style:solid 1px;
+              
+
+              width:350px;
+              margin-left:20px;
+              height:50px;
+              border-radius:5px;
+              position:absolute;
+              top:90px;
+              font-family: Helvetica Neue,Helvetica,sans-serif;
+              margin-top:30px;
+              background-color: white;
+
+          }
+          .learn:hover{
+              background-color: lightgrey;
+          }
+          .header-2{
+              display:flex;
+              
+              font-family: BentonSans,Helvetica Neue,Helvetica,sans-serif;
+              flex-direction: row;
+              justify-content: center;
+              
+              font-size: 25px;
+              font-size: 1.875rem;
+             line-height: 2.375rem;
+             font-weight:300;
+              
+              
+
+          }
+         
+          .page2-container2{
+              width:387px;
+              position:absolute;
+              top:110px;
+              right:440px;
+              border-top-left-radius:5px ;
+              border-top-right-radius:5px ;
+            object-fit: cover;
+            height:218px;
+                
+          }  
+          .box3{
+              width:387px;
+          }
+          
+          .adventure4{
+              position: absolute;
+              border-style:none;
+              width:388px;
+              background-color:rgb(255, 253, 253);
+              margin-top:-10px;
+              height:186px;
+              border-bottom-left-radius:5px;
+              border-bottom-right-radius:5px;
+              cursor:pointer;
+              font-family: BentonSans,Helvetica Neue,Helvetica,sans-serif;
+              font-weight: 320;
+              font-size: 1.25rem;
+              line-height: 1.75rem;
+              color: #333;
+              
+
+          }
+          .adventure4:hover{
+              background-color:lightgrey;
+          }
+          .head4{
+             margin-left: 20px;
+        
+          }
+
+          .text4{
+              margin-left:25px;
+              position:absolute;
+              top:10px;
+
+
+          }
+          .explore{
+              color:#006fcf;
+              border-color: blue;
+              border-style: 1px solid;
+              width:350px;
+              margin-left:20px;
+              height:50px;
+              border-radius:2px;
+              position:absolute;
+              top:90px;
+              font-family: Helvetica Neue,Helvetica,sans-serif;
+              margin-top:30px;
+              border-radius: 5px;
+              background-color: white;
+
+          }
+          .explore:hover{
+              background-color: lightgrey;;
+          }
+          .page2-container3{
+              width:399px;
+              position:absolute;
+              top:110px;
+              right:10px;
+              border-top-left-radius:5px ;
+              border-top-right-radius:5px ;
+            object-fit: cover;
+            height:218px;
+                
+          }  
+          
+          .adventure5{
+              position: absolute;
+              border-style:none;
+              width:388px;
+              background-color:rgb(255, 253, 253);
+              margin-top:-20px;
+              height:184px;
+              border-bottom-left-radius:5px;
+              border-bottom-right-radius:5px;
+              cursor:pointer;
+              font-family: Helvetica Neue,Helvetica,sans-serif;
+              font-weight: 320;
+              font-size: 1.25rem;
+              line-height: 1.75rem;
+              
+
+          }
+          .adventure5:hover{
+              background-color:lightgrey;
+          }
+          .head5{
+             margin-left: 20px;
+        
+          }
+
+          .text5{
+              margin-left:20px;
+              position:absolute;
+              top:10px;
+
+          }
+          .benefits{
+              color:#006fcf;
+              border-color: blue;
+              border-style: solid;
+              width:350px;
+              margin-left:20px;
+              height:50px;
+              border-radius:2px;
+              position:absolute;
+              top:90px;
+              font-family: Helvetica Neue,Helvetica,sans-serif;
+              font-weight: 400;
+              line-height: 1.375rem;
+              margin-top: 30px;
+              background-color: white;
+              border-radius: 5px;
+
+          }
+          .benefits:hover{
+              background-color:lightgrey;
+          }
+          .big-container2{
+              
+              position:relative;
+          }
+          .box5{
+              position:relative;
+            width:1300px;
+              height:350px;
+              margin-top: 80px;
+              margin-left:-850px;
+              
+              
+          }
+          .adventure6{
+              position:absolute;
+              width:400px;
+              height:294px;
+              border-style:none;
+              bottom:420px;
+              right:825px;
+              background-color: white;
+              border-radius:3px;
+
+
+          }
+          .adventure7{
+             position:absolute;
+             width:400px;
+             height:294px;
+             border-style: none;
+             bottom:420px;
+              right:395px;
+              background-color: white;
+              border-radius:3px;
+
+          }
+          .adventure8{
+            position:absolute;
+             width:400px;
+             height:294px;
+             border-style:none;
+             bottom:420px;
+              left:30px;
+              background-color: white;
+              border-radius:3px;
+
+          }
+          .learn2{
+            background-color:#006fcf;
+              color:white;
+              border-style:none;
+             width:350px;
+              margin-left:20px;
+              height:40px;
+              border-radius:5px;
+              position:absolute;
+              top:155px;
+              left:5px;
+           font-family: Helvetica Neue,Helvetica,sans-serif;
+              margin-top:30px;
+              font-weight: 400;
+              font-size: medium;
+              height:50px;
+              
+          }
+          .view{
+            background-color:#006fcf;
+              color:white;
+              border-style:none;
+             width:350px;
+              margin-left:20px;
+              height:40px;
+              border-radius:5px;
+              position:absolute;
+              top:155px;
+              left:5px;
+              font-family: Helvetica Neue,Helvetica,sans-serif;
+              margin-top:30px;
+              font-weight: 400;
+              font-size: medium;
+              height:50px;
+
+          }
+          .explore2{
+            background-color:#006fcf;
+              color:white;
+              border-style:none;
+             width:350px;
+              margin-left:20px;
+              height:40px;
+              border-radius:5px;
+              position:absolute;
+              top:155px;
+              left:5px;
+              
+              font-family: Helvetica Neue,Helvetica,sans-serif;
+              margin-top:30px;
+              font-weight: 400;
+              font-size: medium;
+              height:50px;
+          }
+            
+          .text6,.text8,.text10{
+             text-align: center;
+             margin-top:60px;
+          }
+          .text7,.text9,.text11{
+            font-weight: 350;
+              font-size: medium;
+              margin-left:43px;
+              margin-top:30px;
+              width:340px;
+          }
+          .final-container{
+              display:flex;
+              flex-direction: row;
+              justify-content: space-between;
+              position:relative;
+              
+              width:800px;
+              height:350px;
+              margin-left:-850px;
+              font-family: Helvetica Neue,Helvetica,sans-serif;
+              font-weight: 350;
+              font-size: 15px;
+              color:#006fcf;
+              margin-top:40px;
+              border-bottom-style: solid;
+              border-bottom-color:lightgrey;
+              
+              
+              
+              
+              
+          }
+          .last-page1{
+              display:flex;
+              flex-direction:column;
+              
+              width:190px;
+              
+              
+          }
+          .last-page2{
+            display:flex;
+            flex-direction:column;
+            
+            width:200px;
+          }
+          .last-page3{
+            display:flex;
+            flex-direction:column;
+            
+            width:200px;
+
+          }
+          .about,.Products,.links{
+               font-size: medium;
+               color:gray;
+          }
+
+              
+              
+              
+        
+          
+
+            
+              
+              
+              
+              
+          
+              
+              
+          
+            
+              
+          
+
+
+
+
+ </style>
+
+    </head>
+
+<body>
+<div class="header">
+    <div class="left-side">
+        <div  class="icon">
+            <img src="one.svg">
+
+        </div>
+        <div class="first">My Account
+
+        </div>
+        <div class="second">Cards
+
+        </div>
+        <div class="third">Banking
+
+        </div>
+        <div class="fourth">Travel
+
+        </div>
+        <div class="fifth">Rewards & Benefits
+
+        </div>
+        <div class="sixth">Business
+
+        </div>
+
+    
+        <div class="icon2">
+            
+         <img class="search" src="https://icon-library.com/images/01-512_7282.png">
+         <input type="text" id="srch" placeholder="search">
+              </p>
+        </div>
+
+        <div class="eighth">Help
+
+        </div>
+        <button class="nineth">Log In
+
+        </button>
+    </div>
+</div>
+<div class="header2">
+    <div class="one">Personal</div>
+    <div class="two">Buisness</div>
+    <div class="three">Welcome to American Express</div>
+    
+</div>
+<div class="sidebar">
+    <div class="first-section">
+        <img class ="bank" src="piggy-bank.png">
+        <div class="card"> Personal Cards</div>
+    </div>
+    <div class="second-section">
+         <img  class="savings" src="card.webp">
+         <div class="Account"> Saving Accounts</div>
+    </div>
+    <div class="third-section">
+        
+        <img class="personal" src="loan.png">
+        <div class="Loans"> Personal Loans</div>
+    </div>
+    <div class="fourth-section">
+        <img class="saving" src="savings.png">
+        <div class="checkings "> Personal Checkings</div>
+    </div>
+    <div class="fifth-section">
+      
+      <img class="credit" src="giftcard.png">
+      <div class="cards">Gift cards</div>
+    </div>
+    <div class="slider" >
+        <div class="myslides">
+        <img class="image1" src="img1.jpeg">
+        <div class="numbertext">1</div>
+        </div>
+    </div>
+    <div class="card-container">
+            <img class="box1" src="grey.jpeg">
+            <div class="adventure">
+            <p class="head2">Personal Cards</p>
+            <p class="text">
+            Find the Card to reward your next adventure - near or far.
+            </p>
+            </div>
+
+    </div>
+    <div class="card-container2">
+            <img class="box2" src="page2a.jpeg">
+            <div class="adventure2">
+            <p class="head2">American Express MyCredit Guide</p>
+            <p class="text2">Get a detailed report to stay informed about your creditscore
+            
+            </p>
+    </div>
+    <div class="big-container">
+        <div class="header-2">
+            <p class="2a">More to Explore</p>
+        </div>
+     <div class="page2-container1">
+                <img class="box3" src="page2a.jpeg">
+                <div class="adventure3">
+                <p class="text3">
+                Explore Buisness Products & Services
+                </p>
+                <button class="learn">Learn More</button>
+                </div>
+     </div>
+     <div class="page2-container2">
+        <img class="box3" src="page2b.jpeg">
+        
+        <div class="adventure4">
+        <p class="text4">
+        Keep Your Personal Information Personal
+        </p>
+        <button class="explore">Explore Now</button>
+        </div>
+     </div>
+     <div class="page2-container3">
+        <img class="box3" src="page2c.jpeg">
+        <div class="adventure5">
+        <p class="text5">
+        See How You Can Maximize Your Benefits
+        </p>
+        <button class="benefits">View Benefits</button>
+        </div>
+     </div>
+    </div>
+    <div class="page3-container">
+        <div class="big-container2">
+             <img class="box5" src="grey.jpeg">
+        </div>
+         <div class="adventure6">
+           <p class="text6">
+           Places to Use your Card
+           </p>
+          <p class="text7">
+            Check out other buisnesses that accept Amex
+           </p>
+          <button class="explore2">Explore Now</button>
+         </div>
+         <div class="adventure7">
+            <p class="text8">
+              Free Credit Score
+            </p>
+            <p class="text9">
+                Get a detailed TransUnion credit report that helps you stay informed
+            </p>
+           <button class="view">View Now</button>
+         </div>
+         <div class="adventure8">
+            <p class="text10">
+            Start Accepting Amex
+            </p>
+            <p class="text11">
+            Get access to 112MM+ Cards Worldwide and competitive pricing opportunities
+            </p>
+           <button class="learn2"> Learn More</button>
+         </div>
+         <div class="final-container">
+         <div class="last-page1">
+            <h1 class="about"> ABOUT</h1>
+            
+                <p>About American Express </p>
+                <p>Investor Relations</p>
+                <p>Carrers</p>
+                <p>Global Network</p>
+                <p> Contact Us</p>
+                <p>Amex Mobile App</p>
+        </div>
+        <div class="last-page2">
+           <h2 class="Products">Products & Services</h2>
+               <p>Credit Cards </p>
+               <p>Business Credit Cards</p>
+               <p> Corporate Programs</p>
+               <p> Prepaid Cards</p>
+               <p>Saving Accounts & CDs</p>
+               <p> Gift Cards</p>
+        </div>
+        <div class="last-page3">
+           <h3 class="links"> Links You May Like</h3>
+              <p>Membership Rewards</p>
+              <p>Free Credit Score & Report</p>
+              <p> Credit Score</p>
+              <p> Bluebird</p>
+              <p>Accept Amex Cards</p>
+              <p> Refer A Friend</p>
+        </div>
+     </div>
+     </div>
+        
+    </div>
+        
+</div>  
+        
+
+</body>
+</html>
