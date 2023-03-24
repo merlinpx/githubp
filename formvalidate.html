@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <style>
+        .name{
+            color:blue;
+            font-size: x-large;
+           margin-bottom: 40px;
+           width:30px;
+         
+        }
+        .pwd{
+            color:blue;
+            font-size: x-large;
+            margin-bottom: 40px;
+            
+           
+            
+        }
+        .box{
+            width:70px;
+            height:200px;
+            position:fixed;
+            cursor:pointer;
+           
+            
+        
+            
+        }
+        .big{
+            width:700px;
+            height:1000px;
+            margin-left:300px;
+            cursor:pointer;
+        }
+        .logo{
+           
+     
+            width:135px;
+            height:135px;
+            position :absolute;
+            left:550px;
+            top:50px;
+           
+            
+
+        }
+        .content{
+            position :absolute;
+           
+            top:300px;
+            left:350px;
+            width:300px;
+            
+            height:500px;
+            padding-left:70px;
+            padding-right:40px;
+            padding-top:20px;
+            margin-left:50px;
+            margin-top:-50px;
+            cursor:pointer;
+          
+            
+
+        }
+        .valid{
+            color:green;
+        }
+        .invalid{
+            color:red;
+        }
+        .lgn-btn {
+           
+            cursor: pointer;
+            transition:.4s;
+         
+        }
+        .lgn-btn:hover {
+            background-color: orange;
+        }
+       
+        
+
+
+    </style>
+
+    <body>
+        <form name="login-form" id="login-form">
+        <div class="box" >
+            <img class="big" src="https://images.pexels.com/photos/1762851/pexels-photo-1762851.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"></div>
+            <div class="icon" ><img class= "logo" src="https://letsmovelibraries.org/wp-content/uploads/2019/04/LetsMoveIcon.jpg"></div>
+            <div class="content">
+        <label class="name">Username:</label><input class="input-field" name="username" type="textbox" id="txt" placeholder="Username" style="width:280px ; height:45px;border-radius: 15px;border-style: none;margin-top:10px;font-size:large;">
+        <label class="pwd">Password:</label><input class="input-field" name="password" type="password" id= "pwd"placeholder="Password" style="width:280px ; height:45px;border-radius: 15px;border-style: none;margin-top:10px;font-size:large">
+        <button class="lgn-btn" id="login" onClick="validate()" style="width:280px ; height:45px;border-radius: 15px;border-style: none;margin-top:20px;background-color: rgb(236, 191, 66); font-size:large;color:blue;margin-top:30px;">Login</button>
+        <a id="Forgot" style="width:30px;color:blue; font-size:large;">Forgot Password?</a>
+        <a id="create" style="width:30px;color:blue;  font-size:large;">CREATE ACCOUNT</a>
+
+            </div>
+
+        </div>
+    </form>
+        <script>
+           // var attempt=3;
+           // function validate(){
+            const form = document.querySelector('#login-form');
+            const pass_reg = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+            let username = form.elements.namedItem("username");
+            let password = form.elements.namedItem("password");
+           // if (user== "merlin" && pass == "123"){
+           // alert('Account Verified');
+            
+           // return false;
+           // }
+
+           // else{
+              //  attempt--;
+               // alert("you have left "+attempt+" attempt");
+
+          //  }
+            
+       // }
+      
+       username.addEventListener('input', validate);
+       password.addEventListener('input', validate);
+
+       form.addEventListener('submit',function (e){
+        e.preventDefault();
+        alert('SUBMITTED');
+        return true;
+
+       });
+
+       function validate(e){
+        let target= e.target;
+       
+       /* if(e.target.name == "password"){
+            if(pass_reg.test(e.target.value)){
+                e.target.classList.add('vaild');
+                e.target.classList.remove('invaild');
+                
+            }else{
+                e.target.classList.add('invaild');
+                e.target.classList.remove('vaild');
+
+            }
+          
+
+        }*/
+        if(e.target.name == "username"){
+            if(e.target.value.length > 5){
+                e.target.classList.add('valid');
+                e.target.classList.remove('invalid');
+            } else{
+                e.target.classList.add('invalid');
+                e.target.classList.remove('valid');
+            }
+        }
+    }
+
+        
+            
+        
+       
+        </script>
+
+
+    </body>
+</html>
