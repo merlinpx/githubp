@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+
+</head>
+<body>
+<form name="calculator" style= "background-color:#fbb034" >
+    <div class ="wrapper" style="width:400px; height:600px; background-color:#485461;border-style:solid;margin-left: 200px;">
+       <div class="top"> <input name ="display" placeholder="0" style="width:400px;height:110px;background-color:#4357692d;border-style:solid;margin-right: 0px;color: white;font-size:xx-large"></div>
+     <div class="ButtonBox"style="width:380px;height:470px;background-color:#485461;border-style:solid;margin-left: 10px;"> 
+      <div class="first-row"  style="display:flex;flex-direction:row;margin-top:20px;">
+        <input type="reset" value="C" style="width:60px;height:55px;background-color:#503cd1;border-radius:16px; margin-left:15px;color: white;font-size:xx-large"onclick="clear()">
+        <input class="button" value="CE" style="width:60px;height:55px;background-color:#503cd1; margin-left:35px; border-radius:16px;font-size:xx-large;color: white;" >
+        <input class="button" value="%"  style= "width:60px;height:55px;background-color:#503cd1 ;
+         margin-left:30px;border-radius:16px;text-align:center;font-size:x-large; color: white;" onclick= "mod()">
+        <input class="button" value="/"  style="width:60px;height:55px;background-color:#503cd1; margin-left:30px;border-radius:16px;text-align:center;font-size:xx-large;color: white;"onclick="divide()">
+      </div>
+      <div class="second-row"  style="display:flex;flex-direction:row;margin-top:30px;">
+        <input class="button"id="mybtn"  value="7" style="width:60px;height:55px;background-color:#503cd1;border-radius:18px; margin-left:15px;font-size:xx-large;text-align:center;color: white" onclick = "calculator.display.value += '7'">
+        <input class="button" id="mybtn" value="8" style="width:60px;height:55px;background-color:#503cd1; margin-left:30px; border-radius:16px;font-size:xx-large;color: white;text-align: center"onclick ="calculator.display.value += '8'" >
+        <input class="button" id="mybtn" value="9" style="width:60px;height:55px;background-color:#503cd1; margin-left:30px;border-radius:16px;font-size:xx-large;color: white;text-align: center" onclick ="calculator.display.value += '9'">
+       
+        <input class="button" value="X"style="width:60px;height:55px;background-color:#503cd1; margin-left:30px;border-radius:16px;font-size:xx-large;color: white;text-align: center;" onclick="multi()">
+      </div>
+      <div class="third-row"  style="display:flex;flex-direction:row;margin-top:30px;">
+        <input class="buttton"id="mybtn" value="4" style="width:60px;height:55px;background-color:#503cd1;border-radius:18px; margin-left:15px;font-size:xx-large;text-align:center;color: white" onclick="calculator.display.value += '4'"> 
+        <input class="button" id="mybtn"value="5" style="width:60px;height:55px;background-color:#503cd1; margin-left:30px; border-radius:16px;font-size:xx-large;text-align:center;color: white;" onclick="calculator.display.value += '5'">
+        <input class="button"id="mybtn" value="6" style="width:60px;height:55px;background-color:#503cd1; margin-left:30px;border-radius:16px;font-size:xx-large;text-align:center;color: white;"onclick="calculator.display.value += '6'">
+        <input class="button" value="-" style="width:60px;height:55px;background-color:#503cd1; margin-left:30px;border-radius:16px;font-size:xx-large;text-align:center;color: white;" onclick="sub()">
+      </div>
+      <div class="fourth-row"  style="display:flex;flex-direction:row;margin-top:30px;">
+        <input class="button"value="1"  id="mybtn"style="width:60px;height:55px;background-color:#503cd1;border-radius:18px; margin-left:15px;font-size:xx-large;text-align:center;color: white;"onclick="calculator.display.value += '1'">
+        <input class="button" value="2" id="mybtn"style="width:60px;height:55px;background-color:#503cd1;margin-left:30px; border-radius:16px;font-size:xx-large;text-align:center;color: white;"onclick="calculator.display.value += '2'">
+        <input class="button"value="3" id="mybtn" style="width:60px;height:55px;background-color:#503cd1; margin-left:30px;border-radius:16px;font-size:xx-large;text-align:center;color: white;"onclick="calculator.display.value += '3'">
+        <input class="button" value="+" style="width:60px;height:55px;background-color:#503cd1; margin-left:30px;border-radius:16px;font-size:xx-large;text-align:center;color: white;" onclick="add()">
+      </div>
+      <div class="fifth-row"  style="display:flex;flex-direction:row;margin-top:30px;">
+        <input class="button"value="0" style="width:60px;height:55px;background-color:#503cd1;border-radius:18px; margin-left:15px;font-size:xx-large;text-align:center;color: white;"onclick="calculator.display.value += '0'">
+        <input class="button" value="." style="width:60px;height:55px;background-color:#503cd1; margin-left:30px; border-radius:16px;font-size:xx-large;text-align:center;color: white;" onclick="dot()">
+        <input class="button" value="=" style="width:150px;height:55px;background-color:#f33d1d; margin-left:30px;border-radius:16px;font-size:xx-large;text-align:center;color: white;" onclick="(document.calculator.display.value)=eval(document.calculator.display.value)">
+
+      </div>
+     </div>
+        
+    </div>
+</div>
+</form>
+
+
+    <script>
+      
+      function add(){
+        document.calculator.display.value+= "+";
+        
+      }
+      function sub(){
+        document.calculator.display.value+= "-";
+        
+      }
+      function multi(){
+        document.calculator.display.value+= "*";
+        
+      }
+      function divide(){
+        document.calculator.display.value+= "/";
+        
+      }
+      function mod(){
+        document.calculator.display.value+= "%";
+        
+      }
+      function dot(){
+        document.calculator.display.value+= ".";
+        
+      }
+      function clear(){
+        document.calculator.display.value = "";
+        
+      }
+        
+      /* var button = document.querySelectorAll('mybtn');
+       var display= document.getElementById('screen');
+       button.addEventListener("click", () => {
+            button.innertext=display.innerHTML;
+       });*/
+
+     
+       
+
+        
+
+    </script>
+    
+</body>
+</html>
