@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <title>Todo app</title>
+    <style>
+
+    .box{
+       
+         font-family: Poppins,sans-serif;
+         background-color:orangered;
+         width:1200px;
+         height:3000px;
+         position:fixed;
+         
+       }  
+       .container{
+          margin:0 auto;
+          text-align:center;
+          width:70%;
+          max-width:600px;
+          padding:60px ;
+
+          
+
+          
+       } 
+       #add-btn{
+        margin-right:-4px;
+        background-color: #e9adad;
+        width:5%;
+        height:55px;
+        
+        position:absolute;
+        top:345px;
+        left:900px;
+        
+    }
+     
+       input[type='text']{
+        width:40%;
+        padding-top: 20px;
+        outline:none;
+        font-size:1.90rem;
+        margin-right:-4px;
+        background-color:#ffffff;
+        cursor:pointer;
+        margin-left: 150px;
+        margin-top:190px;
+       
+       }
+       input[type='button']{
+        padding:25px;
+        font-size:1.10rem;
+        color:black;
+        font-size: large;
+       
+
+
+     
+
+       }
+       input [type='text']:disabled{
+        cursor:default;
+        color:rgb(227,213,213);
+        background-color:grey;
+       }
+       .rename-task{
+        background-color:#e9adad;
+       }
+       .update-task{
+        margin-left:10px;
+        background-color:#158c47;
+       
+       }
+       .del-task{
+        
+       color:green;
+       }
+      
+       .task{
+        margin-top:-105px;
+       }
+       .active{
+         margin-top: -60px;
+         margin-left:850px;
+       }
+       #add-task{
+         width:400px;
+       }
+      
+
+       
+       
+       
+       
+     
+   </style>
+
+</head>
+<body>
+<div class="box">
+    <div class="container">
+        <h1>ADD TODO LIST</h1>
+    
+      <div id="task-input">
+        <input type="text" id="add-task" name="to-do" placeholder="Add-Task" value=" ";>
+        <button class="add-task" value= "+" name="add" id="add-btn" title="Add-Task"><i style="font-size:34px">&#43</i></button>
+      </div>
+    </div>
+      <div class="new-tasks">
+       <!-- <div class="task">
+            <input type="task"  id="added-task">
+            <input type="checkbox"  id="completed-task"  >
+            <input type="button" id="rename-task"  value="/">
+            <input type="button"  id="del-task" value='X'>
+        </div>-->
+      </div>
+</div>
+    <script>
+        
+        const addInput= document.querySelector("#add-task");
+        const addBtn= document.querySelector("#add-btn");
+        const newTasks= document.querySelector(".new-tasks");
+        const delBtn= document.querySelector(".del-task");
+        const renameBtn= document.querySelector(".rename-task");
+        const updateBtn= document.querySelector(".update-task");
+        addBtn.addEventListener('click',(e) =>{
+            let todo = addInput.value;
+            todo = todo.trim()
+            if(todo == ''){
+                alert('No task is added ');
+            }
+            else{
+               
+                addTodo(todo)
+                addInput.value = '';
+                updateTodo()
+            }
+        })
+        function addTodo(todo){
+            let todoTask = `<div class="task">
+          
+                       <input type ="text" id= "added-task" name='todo' disabled value= "${todo}">
+                <div class='active'>
+                <button class= "update-task"  <i style="font-size:34px">&#10003</i> 
+                <button class= "rename-task"   <i style="font-size:34px">&#9997</i>
+                <button class= "del-task"  <i style= "font-size:34px">&#128465</i> 
+             </div>
+        </div>`
+        newTasks.innerHTML += todoTask;
+        }
+    function updateTodo() {
+        let task = document.querySelectorAll('.task')
+        task.forEach((t ) => 
+            //console.log(t.children)
+            { 
+                t.addEventListener('click', e => {
+                if(e.target.classList.contains('rename-task')){
+                    console.log('rename')
+                    if(t.children[0].disabled){
+                        t.children[0].disabled=false
+                    }
+                    }else
+                    if(e.target.classList.contains('del-task')) {
+                        t.remove()
+                    }else if
+                    (e.target.classList.contains('update-task')) {
+                        console.log(t.children[0].disabled)
+                        if(t.children[0].disabled){
+                            t.children[0].disabled=true;
+                          }
+                         }
+                        })
+                    })
+                }
+        
+            
+                  
+                
+            
+
+            
+        
+    
+
+
+    </script>
+
+    
+    
+</body>
+</html>
